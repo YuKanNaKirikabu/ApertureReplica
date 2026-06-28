@@ -1,67 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=1440"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aperture Studios</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet"/>
-    </head>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet" />
+  </head>
 
-    <body>
-      <!-- 1) БЛОК: Хедер (1440x90) + Hero (1440x800)-->
-      <header class="hero-block">
-        <!-- Хедер-->
-        <div class="header">
-          <div class="header-inner">
-            <!-- Логотип-->
-            <div class="logo">
-              <img src="images/ApertureLogo.svg" alt="Aperture"/>
-            </div>
-
-            <!-- Навигация-->
-            <nav class="nav">
-              <a href="#what-we-do" class="nav-link">Business areas</a>
-              <a href="#featured" class="nav-link">Featured images</a>
-              <a href="#gear-cage" class="nav-link">Gear cage</a>
-              <a href="#contact" class="nav-link">Contact</a>
-              <a href="#" class="nav-btn">Get template</a>
-            </nav>
-          </div>
+  <body>
+    <!--ХЕДЕР-->
+    <header class="header">
+      <div class="container header-inner">
+        <!--Логотип-->
+        <div class="logo">
+          <img src="images/ApertureLogo.svg" alt="Aperture" />
         </div>
 
-        <!-- Hero-контент поверх фона-->
+        <!--Навигация (десктопная)-->
+        <nav class="nav nav-desktop">
+          <a href="#what-we-do"   class="nav-link">Business areas</a>
+          <a href="#featured"     class="nav-link">Featured images</a>
+          <a href="#gear-cage"    class="nav-link">Gear cage</a>
+          <a href="#contact"      class="nav-link">Contact</a>
+          <a href="#"             class="nav-btn">Get template</a>
+        </nav>
+
+        <!--Бургер-иконка (мобильная)-->
+        <button class="burger" id="burgerBtn" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!--Мобильное меню (выезжает поверх)-->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+          <a href="#what-we-do" class="mobile-link">Business areas</a>
+          <a href="#featured"   class="mobile-link">Featured images</a>
+          <a href="#gear-cage"  class="mobile-link">Gear cage</a>
+          <a href="#contact"    class="mobile-link">Contact</a>
+          <a href="#"           class="mobile-btn">Get template</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!--1) Hero (1440x800)-->
+      <section class="hero-block">
         <div class="hero-content">
           <p class="hero-subtitle">Photographer &amp; Filmmaker</p>
           <h1 class="hero-title">Aperture Studios</h1>
           <p class="hero-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
-          Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-          Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+            Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+            Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
           </p>
         </div>
 
-        <!-- Параметры съёмки (внизу справа)-->
         <div class="hero-meta">
-          <span class="meta-item">
-            <img src="images/Degrees.svg" alt="Выдержка" class="icon"/> 1/2000s
-          </span>
-
-          <span class="meta-item">
-            <img src="images/Camera.svg" alt="Диафрагма" class="icon"/> f/11
-          </span>
-
-          <span class="meta-item">
-            <img src="images/ISO.svg" alt="ISO" class="icon"/> 100
-          </span>
-
-          <span class="meta-item">
-            <img src="images/Coordinates.svg" alt="Местоположение" class="icon"/> Iceland
-          </span>
+          <span class="meta-item"><img src="images/Degrees.svg"     alt="Выдержка"        class="icon" /> 1/2000s</span>
+          <span class="meta-item"><img src="images/Camera.svg"      alt="Диафрагма"       class="icon" /> f/11</span>
+          <span class="meta-item"><img src="images/ISO.svg"         alt="ISO"             class="icon" /> 100</span>
+          <span class="meta-item"><img src="images/Coordinates.svg" alt="Местоположение"  class="icon" /> Iceland</span>
         </div>
-      </header>
+      </section>
 
-      <!-- 2) БЛОК: What we do (1440x1558)-->
+      <!--2) What we do-->
       <section id="what-we-do" class="what-we-do">
         <div class="container">
           <div class="section-heading">
@@ -70,49 +76,45 @@
           </div>
 
           <div class="cards-grid">
-            <!-- Карточка 1: Product Photography -->
             <div class="card">
-              <img src="images/2.1.jpg" alt="Product Photography"/>
+              <img src="images/2.1.jpg" alt="Product Photography" />
               <div class="card-content">
                 <h3>Product Photography</h3>
                 <p>Cras commodo consequat orci, in convallis risus egestas non. Nulla efficitur auctor hendrerit. Etiam ut orci varius, faucibus libero ac, cursus quam.</p>
-                <a href="https://habr.com/ru/news/1052690/" target="_blank" class="btn-white">
+                <a href="https://habr.com/ru/news/1052690/" target="_blank" rel="noopener noreferrer" class="btn-white">
                   <span class="btn-icon"></span> Read more
                 </a>
               </div>
             </div>
 
-            <!-- Карточка 2: Architecture Photography -->
             <div class="card">
-              <img src="images/2.2.jpg" alt="Architecture Photography"/>
+              <img src="images/2.2.jpg" alt="Architecture Photography" />
               <div class="card-content">
                 <h3>Architecture Photography</h3>
                 <p>Aenean porta neque eget consequat fringilla. Vestibulum ultrices, orci nec egestas pharetra, ligula est semper enim, nec auctor sapien leo nec purus. Fusce tincidunt aliquet sapien, sit amet rhoncus leo imperdiet nec.</p>
-                <a href="https://habr.com/ru/companies/bothub/news/1052908/" target="_blank" class="btn-white">
+                <a href="https://habr.com/ru/companies/bothub/news/1052908/" target="_blank" rel="noopener noreferrer" class="btn-white">
                   <span class="btn-icon"></span> Read more
                 </a>
               </div>
             </div>
 
-            <!-- Карточка 3: Drone Photography -->
             <div class="card">
-              <img src="images/2.3.jpg" alt="Drone Photography"/>
+              <img src="images/2.3.jpg" alt="Drone Photography" />
               <div class="card-content">
                 <h3>Drone Photography</h3>
                 <p>Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt. Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non. Nulla efficitur auctor hendrerit. Etiam ut orci varius, faucibus libero ac, cursus quam.</p>
-                <a href="https://habr.com/ru/news/1052870/" target="_blank" class="btn-white">
+                <a href="https://habr.com/ru/news/1052870/" target="_blank" rel="noopener noreferrer" class="btn-white">
                   <span class="btn-icon"></span> Read more
                 </a>
               </div>
             </div>
-
-            <!-- Карточка 4: Wildlife Photography -->
+            
             <div class="card">
-              <img src="images/2.4.jpg" alt="Wildlife Photography"/>
+              <img src="images/2.4.jpg" alt="Wildlife Photography" />
               <div class="card-content">
                 <h3>Wildlife Photography</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus. Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula. Vestibulum sit amet urna turpis.</p>
-                <a href="https://habr.com/ru/news/1052880/" target="_blank" class="btn-white">
+                <a href="https://habr.com/ru/news/1052880/" target="_blank" rel="noopener noreferrer" class="btn-white">
                   <span class="btn-icon"></span> Read more
                 </a>
               </div>
@@ -121,37 +123,23 @@
         </div>
       </section>
 
-      <!-- 3) БЛОК: Featured (1440x600)-->
+      <!--3) Sunset at Mount Fuji-->
       <section id="featured" class="full-image-block sunset">
-        <div class="image-bg">
-          <img src="images/3.jpg" alt="Sunset at Mount Fuji"/>
-        </div>
-
+        <div class="image-bg"><img src="images/3.jpg" alt="Sunset at Mount Fuji" /></div>
         <div class="image-content">
           <h3>Sunset at Mount Fuji</h3>
           <p>Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis risus egestas non.</p>
         </div>
 
         <div class="image-meta">
-          <span class="meta-item">
-            <img src="images/Degrees.svg" alt="Выдержка" class="icon"/> 1''
-          </span>
-
-          <span class="meta-item">
-            <img src="images/Camera.svg" alt="Диафрагма" class="icon"/> f/16
-          </span>
-
-          <span class="meta-item">
-            <img src="images/ISO.svg" alt="ISO" class="icon"/> 400
-          </span>
-
-          <span class="meta-item">
-            <img src="images/Coordinates.svg" alt="Местоположение" class="icon"/> Japan
-          </span>
+          <span class="meta-item"><img src="images/Degrees.svg"     alt="Выдержка"        class="icon" /> 1''</span>
+          <span class="meta-item"><img src="images/Camera.svg"      alt="Диафрагма"       class="icon" /> f/16</span>
+          <span class="meta-item"><img src="images/ISO.svg"         alt="ISO"             class="icon" /> 400</span>
+          <span class="meta-item"><img src="images/Coordinates.svg" alt="Местоположение"  class="icon" /> Japan</span>
         </div>
       </section>
 
-      <!-- 4) БЛОК: The Gear cage (1440x540)-->
+      <!--4) The Gear cage-->
       <section id="gear-cage" class="gear-cage">
         <div class="gear-text">
           <span class="label">The Gear cage</span>
@@ -161,60 +149,34 @@
             <span class="btn-icon"></span> Check it out
           </a>
         </div>
-
         <div class="gear-image">
-          <img src="images/4.png" alt="The Gear cage"/>
+          <img src="images/4.png" alt="The Gear cage" />
           <div class="gear-meta">
-            <span class="meta-item">
-              <img src="images/Degrees.svg" alt="Выдержка" class="icon"/> 0,8''
-            </span>
-
-            <span class="meta-item">
-              <img src="images/Camera.svg" alt="Диафрагма" class="icon"/> f/5,6
-            </span>
-
-            <span class="meta-item">
-              <img src="images/ISO.svg" alt="ISO" class="icon"/> 100
-            </span>
-
-            <span class="meta-item">
-              <img src="images/Coordinates.svg" alt="Местоположение" class="icon"/> Sweden
-            </span>
+            <span class="meta-item"><img src="images/Degrees.svg"     alt="Выдержка"        class="icon" /> 0,8''</span>
+            <span class="meta-item"><img src="images/Camera.svg"      alt="Диафрагма"       class="icon" /> f/5,6</span>
+            <span class="meta-item"><img src="images/ISO.svg"         alt="ISO"             class="icon" /> 100</span>
+            <span class="meta-item"><img src="images/Coordinates.svg" alt="Местоположение"  class="icon" /> Sweden</span>
           </div>
         </div>
       </section>
 
-      <!-- 5) БЛОК: Monstera Leafs (1440x600)-->
+      <!--5) Monstera Leafs-->
       <section class="full-image-block leafs">
-        <div class="image-bg">
-          <img src="images/5.png" alt="Monstera Leafs"/>
-        </div>
-
+        <div class="image-bg"><img src="images/5.png" alt="Monstera Leafs" /></div>
         <div class="image-content">
           <h3>Monstera Leafs</h3>
           <p>Vestibulum sit amet urna turpis. Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt.</p>
         </div>
 
         <div class="image-meta">
-          <span class="meta-item">
-            <img src="images/Degrees.svg" alt="Выдержка" class="icon"/> 1/400s
-          </span>
-
-          <span class="meta-item">
-            <img src="images/Camera.svg" alt="Диафрагма" class="icon"/> f/3,5
-          </span>
-
-          <span class="meta-item">
-            <img src="images/ISO.svg" alt="ISO" class="icon"/> 100
-          </span>
-
-          <span class="meta-item">
-            <img src="images/Coordinates.svg" alt="Местоположение" class="icon"/> Costa Rica
-          </span>
+          <span class="meta-item"><img src="images/Degrees.svg"     alt="Выдержка"        class="icon" /> 1/400s</span>
+          <span class="meta-item"><img src="images/Camera.svg"      alt="Диафрагма"       class="icon" /> f/3,5</span>
+          <span class="meta-item"><img src="images/ISO.svg"         alt="ISO"             class="icon" /> 100</span>
+          <span class="meta-item"><img src="images/Coordinates.svg" alt="Местоположение"  class="icon" /> Costa Rica</span>
         </div>
       </section>
 
-      <!-- 6) БЛОК: Past clients (1440x500)-->
+      <!--6) Past clients-->
       <section class="past-clients">
         <div class="container">
           <div class="section-heading">
@@ -223,46 +185,32 @@
           </div>
 
           <div class="clients-logos">
-            <img src="images/6.1.png" alt="Client 1"/>
-            <img src="images/6.2.png" alt="Client 2"/>
-            <img src="images/6.3.png" alt="Client 3"/>
-            <img src="images/6.4.png" alt="Client 4"/>
-            <img src="images/6.5.png" alt="Client 5"/>
+            <img src="images/6.1.png" alt="Client 1" />
+            <img src="images/6.2.png" alt="Client 2" />
+            <img src="images/6.3.png" alt="Client 3" />
+            <img src="images/6.4.png" alt="Client 4" />
+            <img src="images/6.5.png" alt="Client 5" />
           </div>
         </div>
       </section>
 
-      <!-- 7) БЛОК: Star fall in the Himalayas (1440x600)-->
+      <!--7) Star fall-->
       <section class="full-image-block starfall">
-        <div class="image-bg">
-          <img src="images/7.png" alt="Star fall in the Himalayas"/>
-        </div>
-
+        <div class="image-bg"><img src="images/7.png" alt="Star fall in the Himalayas" /></div>
         <div class="image-content">
           <h3>Star fall in the Himalayas</h3>
           <p>Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex, condimentum dapibus congue et, vulputate ut ligula.</p>
         </div>
 
         <div class="image-meta">
-          <span class="meta-item">
-            <img src="images/Degrees.svg" alt="Выдержка" class="icon"/> 6''
-          </span>
-
-          <span class="meta-item">
-            <img src="images/Camera.svg" alt="Диафрагма" class="icon"/> f/11
-          </span>
-
-          <span class="meta-item">
-            <img src="images/ISO.svg" alt="ISO" class="icon"/> 800
-          </span>
-
-          <span class="meta-item">
-            <img src="images/Coordinates.svg" alt="Местоположение" class="icon"/> Nepal
-          </span>
+          <span class="meta-item"><img src="images/Degrees.svg"     alt="Выдержка"        class="icon" /> 6''</span>
+          <span class="meta-item"><img src="images/Camera.svg"      alt="Диафрагма"       class="icon" /> f/11</span>
+          <span class="meta-item"><img src="images/ISO.svg"         alt="ISO"             class="icon" /> 800</span>
+          <span class="meta-item"><img src="images/Coordinates.svg" alt="Местоположение"  class="icon" /> Nepal</span>
         </div>
       </section>
 
-      <!-- 8) БЛОК: Contact (1440x414)-->
+      <!--8) Contact-->
       <section id="contact" class="contact">
         <div class="help-content">
           <h2>Need help with photography or videography?</h2>
@@ -272,88 +220,70 @@
           </a>
         </div>
       </section>
+    </main>
 
-      <!-- 9) БЛОК: Футер (1440x652)-->
-      <footer class="footer">
-        <div class="container">
-          <!-- Верхняя часть футера-->
-          <div class="footer-top">
-            <!-- Колонка 1: Логотип + описание-->
-            <div class="footer-col">
-              <div class="logo">
-                <img src="images/ApertureLogo.svg" alt="Aperture"/>
-              </div>
-
-              <p>Photographers &amp; videographers capturing the world around us.</p>
-            </div>
-
-            <!-- Колонка 2: Business areas-->
-            <div class="footer-col">
-              <span class="footer-label">Business areas</span>
-              <ul>
-                <li><a href="#">Product Photography</a></li>
-                <li><a href="#">Architecture Photography</a></li>
-                <li><a href="#">Drone Photography</a></li>
-                <li><a href="#">Wildlife Photography</a></li>
-              </ul>
-            </div>
-
-            <!-- Колонка 3: Pages-->
-            <div class="footer-col">
-              <span class="footer-label">Pages</span>
-              <ul>
-                <li><a href="#">Gear cage</a></li>
-                <li><a href="#">Featured images</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Style guide</a></li>
-                <li><a href="#">Instructions</a></li>
-                <li><a href="#">Changelog</a></li>
-              </ul>
-            </div>
+    <!--ФУТЕР-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-col footer-col-logo">
+            <div class="logo"><img src="images/ApertureLogo.svg" alt="Aperture" /></div>
+            <p>Photographers &amp; videographers capturing the world around us.</p>
           </div>
 
-          <!-- Разделитель-->
-          <hr/>
-
-          <!-- Средняя часть: подписка -->
-          <div class="footer-subscribe">
-            <div>
-              <span class="footer-label">Subscribe to our newsletter</span>
-              <p>Read about all the things we do.</p>
-            </div>
-
-            <div class="subscribe-form-wrapper">
-              <form class="subscribe-form" id="subscribeForm">
-                <input type="email" id="emailInput" placeholder="example@mail.ru" />
-                <button type="submit" id="subscribeBtn">Subscribe</button>
-              </form>
-              <div class="error-message" id="errorMessage">Please enter a valid email address with @</div>
-              <div class="success-message" id="successMessage">Thank you for subscribing!</div>
-            </div>
+          <div class="footer-col">
+            <span class="footer-label">Business areas</span>
+            <ul>
+              <li><a href="#">Product Photography</a></li>
+              <li><a href="#">Architecture Photography</a></li>
+              <li><a href="#">Drone Photography</a></li>
+              <li><a href="#">Wildlife Photography</a></li>
+            </ul>
           </div>
 
-          <!-- Разделитель-->
-          <hr/>
-
-          <!-- Нижняя часть: копирайт + соцсети-->
-          <div class="footer-bottom">
-            <p>&copy; Aperture Photography, Inc. All rights reserved. <a href="#">Licensing</a></p>
-            <div class="social-icons">
-              <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="social-icon">
-                <img src="images/Xnew.svg" alt="X" />
-              </a>
-
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon">
-                <img src="images/Instagram.svg" alt="Instagram" />
-              </a>
-
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-icon">
-                <img src="images/Facebook.svg" alt="Facebook" />
-              </a>
-            </div>
+          <div class="footer-col">
+            <span class="footer-label">Pages</span>
+            <ul>
+              <li><a href="#">Gear cage</a></li>
+              <li><a href="#">Featured images</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Style guide</a></li>
+              <li><a href="#">Instructions</a></li>
+              <li><a href="#">Changelog</a></li>
+            </ul>
           </div>
         </div>
-      </footer>
-      <script src="script.js"></script>
-    </body>
+
+        <hr />
+        <div class="footer-subscribe">
+          <div>
+            <span class="footer-label">Subscribe to our newsletter</span>
+            <p>Read about all the things we do.</p>
+          </div>
+
+          <div class="subscribe-form-wrapper">
+            <form class="subscribe-form" id="subscribeForm">
+              <input  type="email"        id="emailInput" placeholder="example@mail.ru" />
+              <button type="submit"       id="subscribeBtn">Subscribe</button>
+            </form>
+
+            <div class="error-message"    id="errorMessage">Please enter a valid email address with @</div>
+            <div class="success-message"  id="successMessage">Thank you for subscribing!</div>
+          </div>
+        </div>
+
+        <hr />
+        <div class="footer-bottom">
+          <p>&copy; Aperture Photography, Inc. All rights reserved. <a href="#">Licensing</a></p>
+          <div class="social-icons">
+            <a href="https://x.com/"              target="_blank" rel="noopener noreferrer" class="social-icon"><img src="images/Xnew.svg"      alt="X" /></a>
+            <a href="https://www.instagram.com/"  target="_blank" rel="noopener noreferrer" class="social-icon"><img src="images/Instagram.svg" alt="Instagram" /></a>
+            <a href="https://www.facebook.com/"   target="_blank" rel="noopener noreferrer" class="social-icon"><img src="images/Facebook.svg"  alt="Facebook" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
