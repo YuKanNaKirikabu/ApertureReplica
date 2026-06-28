@@ -1,343 +1,640 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    background: #000;
-    color: #fff;
-    width: 1440px;
-    margin: 0 auto;
-    overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background: #000;
+  color: #fff;
+  width: 1440px;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
-/* Центрирующий контейнер*/
+/* Центрирующий контейнер */
 .container {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-/* Белая кнопка с иконкой-заглушкой*/
+/* Белая кнопка с иконкой-заглушкой */
 .btn-white {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #fff;
-    color: #000;
-    border-radius: 14px;
-    padding: 11px 20px 11px 4px;
-    font-size: 15px;
-    line-height: 20px;
-    letter-spacing: 0.4px;
-    transition: opacity 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: #000;
+  border-radius: 14px;
+  padding: 11px 20px 11px 4px;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  transition: opacity 0.2s;
 }
 
 .btn-white:hover {
-    opacity: 0.85;
+  opacity: 0.85;
 }
 
-/* Чёрная иконка-заглушка*/
+/* Чёрная иконка-заглушка */
 .btn-icon {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #000;
-    flex-shrink: 0;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #000;
+  flex-shrink: 0;
 }
 
-/* Мета-информация*/
+/* Мета-информация */
 .meta-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 12px;
-    line-height: 12px;
-    color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #fff;
 }
 
-/* SVG-иконки*/
+/* SVG-иконки */
 .icon {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
-/* БЛОК 1: Хедер + Hero (1440×800)*/
+/* Иконки социальных сетей в футере */
+.social-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.social-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* БЛОК 1: Хедер + Hero (1440×800) */
 .hero-block {
-    position: relative;
-    width: 1440px;
-    height: 800px;
-    background: url('images/1.png') center/cover no-repeat;
-    background-color: #000;
+  position: relative;
+  width: 1440px;
+  height: 800px;
+  background: url('images/1.png') center/cover no-repeat;
+  background-color: #000;
 }
 
-/* Хедер*/
+/* Хедер */
 .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1440px;
-    height: 90px;
-    background: #181818;
-    z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 90px;
+  background: #181818;
+  z-index: 10;
 }
 
 .header-inner {
-    width: 1200px;
-    height: 90px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 32px;
+  width: 1200px;
+  height: 90px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
 }
 
-/* Логотип Aperture (128×31)*/
+/* Логотип Aperture (128×31) */
 .logo img {
-    display: block;
-    width: 128px;
-    height: 31px;
+  display: block;
+  width: 128px;
+  height: 31px;
 }
 
-/* Навигационное меню*/
+/* Навигационное меню */
 .nav {
-    display: flex;
-    align-items: center;
-    padding: 20px 0;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
 }
 
-/* Ссылки в хедере*/
+/* Ссылки в хедере */
 .nav-link {
-    font-size: 13px;
-    line-height: 20px;
-    color: #fff;
-    padding: 15px 0;
+  font-size: 13px;
+  line-height: 20px;
+  color: #fff;
+  padding: 15px 0;
 }
 
-/* Business areas — отступ слева 19.81px, справа 56px*/
+/* Business areas — отступ слева 19.81px, справа 56px */
 .nav-link:first-child {
-    margin-left: 19.81px;
-    margin-right: 56px;
+  margin-left: 19.81px;
+  margin-right: 56px;
 }
 
-/* Featured images, Gear cage, Contact — отступ справа 32px*/
+/* Featured images, Gear cage, Contact — отступ справа 32px */
 .nav-link:nth-child(2),
 .nav-link:nth-child(3),
 .nav-link:nth-child(4) {
-    font-size: 15px;
-    padding: 14px 0 16px;
-    margin-right: 32px;
+  font-size: 15px;
+  padding: 14px 0 16px;
+  margin-right: 32px;
 }
 
-/* Contact*/
+/* Contact — убираем правый отступ */
 .nav-link:nth-child(4) {
-    margin-right: 0;
+  margin-right: 0;
 }
 
-/* Кнопка Get template*/
+/* Кнопка Get template */
 .nav-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    color: #000;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.4px;
-    width: 155px;
-    height: 42px;
-    border-radius: 14px;
-    margin-left: 32px;
-    padding: 0 20px;
-    text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #000;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  width: 155px;
+  height: 42px;
+  border-radius: 14px;
+  margin-left: 32px;
+  padding: 0 20px;
+  text-align: center;
 }
 
-/* Контент поверх фона Hero*/
+/* Контент поверх фона Hero */
 .hero-content {
-    position: absolute;
-    top: 531px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    text-align: center;
-    z-index: 5;
+  position: absolute;
+  top: 531px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  text-align: center;
+  z-index: 5;
 }
 
 .hero-subtitle {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #C0C0C0;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #C0C0C0;
 }
 
 .hero-title {
-    font-size: 54px;
-    line-height: 59.4px;
-    color: #fff;
-    margin-top: 4px;
+  font-size: 54px;
+  line-height: 59.4px;
+  color: #fff;
+  margin-top: 4px;
 }
 
 .hero-desc {
-    font-size: 14px;
-    line-height: 20px;
-    color: #C0C0C0;
-    margin-top: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #C0C0C0;
+  margin-top: 20px;
 }
 
-/* Параметры съёмки в правом нижнем углу Hero*/
+/* Параметры съёмки в правом нижнем углу Hero */
 .hero-meta {
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
-    display: flex;
-    gap: 16px;
-    z-index: 5;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  gap: 16px;
+  z-index: 5;
 }
 
-/* БЛОК 2(1440×1558)*/
+/* БЛОК 2: What we do (1440×1558) */
 .what-we-do {
-    width: 1440px;
-    background: #000;
-    padding: 120px 0;
+  width: 1440px;
+  background: #000;
+  padding: 120px 0;
 }
 
 .what-we-do .container {
-    width: 1200px;
+  width: 1200px;
 }
 
-/* Заголовок секции*/
+/* Заголовок секции */
 .section-heading {
-    text-align: center;
-    margin-bottom: 62px;
+  text-align: center;
+  margin-bottom: 62px;
 }
 
 .section-heading h2 {
-    font-size: 40px;
-    line-height: 42px;
-    color: #fff;
+  font-size: 40px;
+  line-height: 42px;
+  color: #fff;
 }
 
 .section-heading p {
-    font-size: 23px;
-    line-height: 30px;
-    color: #C0C0C0;
-    margin-top: 8px;
+  font-size: 23px;
+  line-height: 30px;
+  color: #C0C0C0;
+  margin-top: 8px;
 }
 
-/* Сетка из 4 карточек (2×2)*/
+/* Сетка из 4 карточек (2×2) */
 .cards-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
-/* Карточка*/
+/* Карточка */
 .card {
-    position: relative;
-    width: 576px;
-    height: 600px;
-    overflow: hidden;
+  position: relative;
+  width: 576px;
+  height: 600px;
+  overflow: hidden;
 }
 
 .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* Текст на карточке*/
+/* Текст на карточке */
 .card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
 }
 
 .card-content h3 {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .card-content p {
-    font-size: 14px;
-    line-height: 20px;
-    color: #C0C0C0;
-    margin: 10px 0 18px;
-    max-width: 90%;
+  font-size: 14px;
+  line-height: 20px;
+  color: #C0C0C0;
+  margin: 10px 0 18px;
+  max-width: 90%;
 }
 
-/* БЛОК 3(1440×600)*/
+/* БЛОКИ 3, 5, 7: Full-image (1440×600) */
 .full-image-block {
-    position: relative;
-    width: 1440px;
-    height: 600px;
-    background: #000;
-    overflow: hidden;
+  position: relative;
+  width: 1440px;
+  height: 600px;
+  background: #000;
+  overflow: hidden;
 }
 
 .full-image-block .image-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .full-image-block .image-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .image-content {
-    position: absolute;
-    right: 60px;
-    top: 260px;
-    width: 300px;
-    text-align: right;
+  position: absolute;
+  right: 60px;
+  top: 260px;
+  width: 300px;
+  text-align: right;
 }
 
 .image-content h3 {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .image-content p {
-    font-size: 14px;
-    line-height: 20px;
-    color: #C0C0C0;
-    margin-top: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #C0C0C0;
+  margin-top: 6px;
 }
 
 .image-meta {
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
-    display: flex;
-    gap: 16px;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  gap: 16px;
+}
+
+/* БЛОК 4: The Gear cage (1440×540) */
+.gear-cage {
+  display: flex;
+  width: 1440px;
+  height: 540px;
+  background: #000;
+}
+
+.gear-text {
+  width: 720px;
+  padding: 113px 60px 113px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gear-text .label {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #C0C0C0;
+}
+
+.gear-text h2 {
+  font-size: 28px;
+  line-height: 32px;
+  color: #fff;
+  margin: 6px 0 10px;
+}
+
+.gear-text p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #C0C0C0;
+  margin-bottom: 20px;
+}
+
+.gear-image {
+  position: relative;
+  width: 720px;
+  height: 540px;
+  flex-shrink: 0;
+}
+
+.gear-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gear-meta {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  gap: 16px;
+  z-index: 2;
+}
+
+.gear-meta .icon {
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0;
+}
+
+.gear-meta .meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #fff;
+}
+
+/* БЛОК 6: Past clients (1440×500) */
+.past-clients {
+  width: 1440px;
+  background: #000;
+  padding: 120px 0;
+}
+
+.past-clients .section-heading {
+  margin-bottom: 40px;
+}
+
+.clients-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1168px;
+  margin: 0 auto;
+}
+
+.clients-logos img {
+  max-height: 78px;
+  opacity: 0.8;
+}
+
+/* БЛОК 8: Contact (1440×414) */
+.contact {
+  width: 1440px;
+  height: 414px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.help-content h2 {
+  font-size: 40px;
+  line-height: 42px;
+  color: #fff;
+  max-width: 600px;
+}
+
+.help-content p {
+  font-size: 24px;
+  line-height: 30px;
+  color: #C0C0C0;
+  margin: 12px 0 22px;
+}
+
+/* БЛОК 9: Футер (1440×652) */
+.footer {
+  width: 1440px;
+  background: #000;
+  padding: 100px 0 40px;
+}
+
+.footer .container {
+  width: 1168px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.footer-col:first-child {
+  width: 458px;
+}
+
+.footer-col:first-child p {
+  font-size: 13px;
+  line-height: 20px;
+  color: #C0C0C0;
+  margin-top: 16px;
+}
+
+.footer-label {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #C0C0C0;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-col ul li {
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #fff;
+  margin: 36px 0;
+}
+
+.footer-subscribe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-subscribe p {
+  font-size: 13px;
+  line-height: 20px;
+  color: #C0C0C0;
+}
+
+/* Поле ввода + кнопка */
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 7px;
+  width: 458px;
+}
+
+.subscribe-form input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 7px 0 7px 7px;
+  font-size: 14px;
+  outline: none;
+  color: #000;
+}
+
+.subscribe-form input::placeholder {
+  color: #9CA3AF;
+}
+
+.subscribe-form button {
+  width: 95px;
+  height: 30px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 11px;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  transition: opacity 0.2s;
+}
+
+.subscribe-form button:hover {
+  opacity: 0.8;
+}
+
+.subscribe-form-wrapper {
+  position: relative;
+}
+
+.error-message {
+  color: #EF4444;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 6px;
+  display: none;
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+}
+
+.success-message {
+  color: #22C55E;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 6px;
+  display: none;
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+}
+
+.subscribe-form-wrapper {
+  position: relative;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: #C0C0C0;
+}
+
+.footer-bottom a {
+  color: #C0C0C0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
 }
