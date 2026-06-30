@@ -252,10 +252,16 @@ img {
 /*Принудительные размеры для всех иконок в мета-блоках*/
 .hero-meta .icon,
 .image-meta .icon,
-.gear-meta .icon {
+.gear-meta .icon,
+.meta-item .icon {
   width: 16px !important;
   height: 16px !important;
   flex-shrink: 0 !important;
+  min-width: 16px !important;
+  max-width: 16px !important;
+  min-height: 16px !important;
+  max-height: 16px !important;
+  object-fit: contain !important;
 }
 
 /*Белая кнопка*/
