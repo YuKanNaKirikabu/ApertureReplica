@@ -277,6 +277,8 @@ img {
   line-height: 1.4;
   letter-spacing: 0.4px;
   transition: opacity 0.2s;
+  width: auto;
+  align-self: flex-start;
 }
 .btn-white:hover {
   opacity: 0.85;
@@ -287,6 +289,10 @@ img {
   border-radius: 50%;
   background: #000;
   flex-shrink: 0;
+}
+.gear-text .btn-white {
+  align-self: flex-start;
+  width: auto;
 }
 
 /*What we do*/
