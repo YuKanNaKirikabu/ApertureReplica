@@ -98,23 +98,37 @@ document.addEventListener('DOMContentLoaded', function () {
   // Таймер для скрытия уведомления
   let notificationTimer = null;
 
-  // Открытие
-  if (openBtn && overlay) {
-    openBtn.addEventListener('click', function (e) {
+// Открытие (для обеих кнопок)
+if (openBtn && overlay) {
+  // Для десктопной кнопки
+  openBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    openModal();
+  });
+
+  // Для мобильной кнопки
+  const mobileOpenBtn = document.querySelector('.mobile-btn');
+  if (mobileOpenBtn) {
+    mobileOpenBtn.addEventListener('click', function (e) {
       e.preventDefault();
-      overlay.classList.add('active');
-      document.body.classList.add('modal-open');
-      form.reset();
-      nameInput.classList.remove('error', 'success');
-      phoneInput.classList.remove('error', 'success');
-      commentInput.classList.remove('error', 'success');
-      document.querySelectorAll('.form-error').forEach(el => el.classList.remove('visible'));
-      hideNotification();
-      // Разблокируем форму
-      const formElements = form.querySelectorAll('input, textarea, button');
-      formElements.forEach(el => el.disabled = false);
+      openModal();
     });
   }
+}
+
+// Выносим открытие в отдельную функцию
+function openModal() {
+  overlay.classList.add('active');
+  document.body.classList.add('modal-open');
+  form.reset();
+  nameInput.classList.remove('error', 'success');
+  phoneInput.classList.remove('error', 'success');
+  commentInput.classList.remove('error', 'success');
+  document.querySelectorAll('.form-error').forEach(el => el.classList.remove('visible'));
+  hideNotification();
+  const formElements = form.querySelectorAll('input, textarea, button');
+  formElements.forEach(el => el.disabled = false);
+}
 
   // Закрытие
   function closeModal() {
